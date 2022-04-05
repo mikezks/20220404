@@ -1,31 +1,29 @@
-import { FlightCancellingModule } from './flight-booking/flight-cancelling/flight-cancelling.module';
 import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { FlightLibModule } from '@flight-workspace/flight-lib';
-
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { metaReducers, reducers } from './+state';
 import { AppComponent } from './app.component';
 import { APP_ROUTES } from './app.routes';
 import { BasketComponent } from './basket/basket.component';
-import { FlightBookingModule } from './flight-booking/flight-booking.module';
+import { FlightCancellingModule } from './flight-booking/flight-cancelling/flight-cancelling.module';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PassengersModule } from './passengers/passengers.module';
 import { SharedModule } from './shared/shared.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './+state';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { environment } from '../environments/environment';
-import { EffectsModule } from '@ngrx/effects';
-import { PassengersModule } from './passengers/passengers.module';
+
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
-    FlightBookingModule,
 
     BrowserAnimationsModule,
     FlightCancellingModule,
