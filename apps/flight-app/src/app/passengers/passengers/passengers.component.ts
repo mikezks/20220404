@@ -9,7 +9,7 @@ import * as fromPassengers from '../+state';
   styleUrls: ['./passengers.component.css']
 })
 export class PassengersComponent implements OnInit {
-  passengers$: Observable<fromPassengers.Passenger[]> = this.store.select(fromPassengers.selectAll);
+  passengers$ = this.store.select(fromPassengers.selectAll);
 
   constructor(private store: Store) { }
 

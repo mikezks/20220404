@@ -1,10 +1,11 @@
-import { Action, createReducer, on } from '@ngrx/store';
-import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
-import { Passenger } from './passenger.model';
+import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
+import { createReducer, on } from '@ngrx/store';
 import * as PassengerActions from './passenger.actions';
+import { Passenger } from './passenger.model';
 
 export const passengersFeatureKey = 'passengers';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface State extends EntityState<Passenger> {
   // additional entities state properties
 }
